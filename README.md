@@ -13,7 +13,6 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
 - **Tools**: Git, VS Code, npm, Webpack
 - **Concepts**: REST APIs, Responsive Design, Agile Development
 
-###
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="41" alt="react logo"  />
   <img width="12" />
@@ -61,7 +60,7 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 I'm always excited to connect, collaborate, or explore job opportunities. Feel free to reach out!
 
-- <img src="https://cdn.simpleicons.org/whatsapp/333333" width="16" height="16" style="vertical-align:middle"> WhatsApp: [Click to chat](https://wa.me/qr/FB3C4RHBNC72C1)
+- 💬 WhatsApp: [Click to Chat](https://wa.me/qr/FB3C4RHBNC72C1)
 - 📧 Primary Email: herald.mbre.inyang@gmail.com
 - 📧 Secondary Email: inyangheraldmbre@outlook.com
 - 💼 LinkedIn: https://www.linkedin.com/in/herald-inyang/
