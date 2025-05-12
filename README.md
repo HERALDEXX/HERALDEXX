@@ -1,4 +1,4 @@
-# Herald Mbre Inyang 👋
+# Hi, I'm Herald Mbre Inyang 👋
 
 Welcome to my GitHub! I'm a passionate full-stack web developer currently pursuing a BSc in Software Engineering. I love crafting innovative web solutions with creativity and precision, turning ideas into reality through code.
 
