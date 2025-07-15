@@ -49,6 +49,11 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 🔗 [View Project](https://github.com/HERALDEXX/react-django-blog-template)
 
+## 🆕 Latest Projects
+
+<!--START_SECTION:latest_repos-->
+<!--END_SECTION:latest_repos-->
+
 ## 📚 Currently
 
 - Pursuing a BSc in Software Engineering, deepening my knowledge of software design and development.
