@@ -52,6 +52,10 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
+- [habit-tracker](https://github.com/HERALDEXX/habit-tracker) - A cross-platform application for building and tracking daily habits, built with Python
+- [Python-Basics-and-Advanced](https://github.com/HERALDEXX/Python-Basics-and-Advanced) - A collection of Python exercises, projects & notes from my basic & advanced Python courses at EarlyFounders Labs.
+- [HERALDEXX](https://github.com/HERALDEXX/HERALDEXX) - Config files for my GitHub profile.
+- [react-django-blog-template](https://github.com/HERALDEXX/react-django-blog-template) - A blog template built with React (Vite) and Django REST Framework
 <!--END_SECTION:latest_repos-->
 
 ## 📚 Currently
