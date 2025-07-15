@@ -9,7 +9,7 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
 ## 🛠️ Skills
 
 - **Frontend**: HTML, CSS, JavaScript, React, TypeScript
-- **Backend**: Django, Python
+- **Backend**: Django, Python, MySQL
 - **Tools**: Git, VS Code, npm, Webpack
 - **Concepts**: REST APIs, Responsive Design, Agile Development
 
@@ -32,12 +32,14 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="41" alt="postgresql logo"  />
   <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="41" alt="mysql logo"  />
+  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="41" alt="npm logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" height="41" alt="materialui logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="41" alt="tailwindcss logo"  />
-<img width ="12" />
+  <img width ="12" />
 </div>
 
 
@@ -58,6 +60,12 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 - [react-django-blog-template](https://github.com/HERALDEXX/react-django-blog-template) - A blog template built with React (Vite) and Django REST Framework
 <!--END_SECTION:latest_repos-->
 
+## 💬 Quote of the Day
+
+<!--START_SECTION:quote-->
+<!--END_SECTION:quote-->
+
+
 ## 📚 Currently
 
 - Pursuing a BSc in Software Engineering, deepening my knowledge of software design and development.
@@ -67,6 +75,9 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 ## 📊 GitHub Stats
 
 ![Herald's GitHub stats](https://github-readme-stats.vercel.app/api?username=HERALDEXX&show_icons=true&theme=radical)
+![GitHub Streak](https://streak-stats.demolab.com?user=HERALDEXX&theme=radical&border_radius=10&date_format=M%20j%5B%2C%20Y%5D)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HERALDEXX&layout=compact&theme=radical)
+
 
 ## 📬 Get in Touch
 
