@@ -74,7 +74,7 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 ## 📊 GitHub Stats
 
-![Herald's GitHub stats](https://github-readme-stats.vercel.app/api?username=HERALDEXX&show_icons=true&theme=radical)
+![Herald's GitHub stats](https://github-readme-stats.vercel.app/api?username=HERALDEXX&show_icons=true&theme=radical&count_private=true&include_all_commits=true)
 ![GitHub Streak](https://streak-stats.demolab.com?user=HERALDEXX&theme=radical&border_radius=10&date_format=M%20j%5B%2C%20Y%5D)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HERALDEXX&layout=compact&theme=radical)
 

@@ -12,6 +12,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+
+      - name: Reset to latest origin/main
+        run: |
+          git fetch origin
+          git reset --hard origin/main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -26,5 +33,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
+          if git diff --cached --quiet; then
+            echo "✅ No changes to commit"
+            exit 0
+          fi
+
           git commit -m "🔄 auto: update latest repos"
-          git push
+          git push || echo "⚠️ Push failed, maybe nothing to push"
+          echo "✨ Done at $(date -u)"
