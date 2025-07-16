@@ -63,6 +63,10 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 ## 💬 Quote of the Day
 
 <!--START_SECTION:quote-->
+🧠  
+                                                                        > *"Code is like humor. When you have to explain it, it’s bad."*  
+                                                                        > — Cory House
+                                                                        
 <!--END_SECTION:quote-->
 
 
