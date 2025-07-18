@@ -64,8 +64,8 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Talk is cheap. Show me the code."*  
-                                                                        > — Linus Torvalds
+                                                                        > *"First, solve the problem. Then, write the code."*  
+                                                                        > — John Johnson
                                                                         
 <!--END_SECTION:quote-->
 
