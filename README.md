@@ -64,8 +64,8 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"First, solve the problem. Then, write the code."*  
-                                                                        > — John Johnson
+                                                                        > *"Code is like humor. When you have to explain it, it’s bad."*  
+                                                                        > — Cory House
                                                                         
 <!--END_SECTION:quote-->
 
