@@ -64,8 +64,8 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Code is like humor. When you have to explain it, it’s bad."*  
-                                                                        > — Cory House
+                                                                        > *"Simplicity is the soul of efficiency."*  
+                                                                        > — Austin Freeman
                                                                         
 <!--END_SECTION:quote-->
 
