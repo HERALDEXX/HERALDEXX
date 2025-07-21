@@ -5,6 +5,9 @@ on:
     - cron: "0 */6 * * *" # re-runs every 6 hours
   workflow_dispatch:
 
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
