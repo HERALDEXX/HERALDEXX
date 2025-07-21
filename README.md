@@ -64,8 +64,8 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Simplicity is the soul of efficiency."*  
-                                                                        > — Austin Freeman
+                                                                        > *"Talk is cheap. Show me the code."*  
+                                                                        > — Linus Torvalds
                                                                         
 <!--END_SECTION:quote-->
 
