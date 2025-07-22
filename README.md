@@ -65,8 +65,8 @@ A modern, full-stack blog platform built with React (Vite) for a dynamic fronten
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Talk is cheap. Show me the code."*  
-                                                                        > — Linus Torvalds
+                                                                        > *"The only way to learn a new programming language is by writing programs in it."*  
+                                                                        > — Dennis Ritchie
                                                                         
 <!--END_SECTION:quote-->
 
