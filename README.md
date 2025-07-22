@@ -42,14 +42,20 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
   <img width ="12" />
 </div>
 
-
 ## 🌟 Featured Project
 
-**React-Django Blog Template**
+### [**HERALDEXX Habit Tracker**](https://github.com/HERALDEXX/habit-tracker)
 
-A modern, full-stack blog platform built with React (Vite) for a dynamic frontend and Django REST Framework for a secure, scalable backend. This project showcases my ability to integrate frontend and backend technologies to create a polished, user-friendly application.
+A sleek, cross-platform app for building and tracking daily habits.  
+Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI**, it includes:
 
-🔗 [View Project](https://github.com/HERALDEXX/react-django-blog-template)
+- Dark/Light/System themes 🌗  
+- Real-time streak tracking 🔁  
+- Beautiful stats and visualizations 📊  
+- Autosave + daily reminders ✨  
+- Full source code and prebuilt releases for **Windows, macOS, and Linux**
+
+> ✅ Perfect for regular users — and devs who want to dive into the source.
 
 ## 🆕 Latest Projects
 
