@@ -71,8 +71,8 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Talk is cheap. Show me the code."*  
-                                                                        > — Linus Torvalds
+                                                                        > *"The only way to learn a new programming language is by writing programs in it."*  
+                                                                        > — Dennis Ritchie
                                                                         
 <!--END_SECTION:quote-->
 
