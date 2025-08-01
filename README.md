@@ -60,11 +60,11 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
+- [linkedinscraper](https://github.com/HERALDEXX/linkedinscraper) - Scrape job postings from LinkedIn
 - [freelancer-project-tracker](https://github.com/HERALDEXX/freelancer-project-tracker) - A MySQL-based freelancer project and payment tracking database system.
 - [habit-tracker](https://github.com/HERALDEXX/habit-tracker) - A cross-platform application for building and tracking daily habits, built with Python
 - [python-basics-and-advanced](https://github.com/HERALDEXX/python-basics-and-advanced) - A collection of Python exercises, projects & notes from my basic & advanced Python courses at EarlyFounders Labs.
 - [HERALDEXX](https://github.com/HERALDEXX/HERALDEXX) - Config files for my GitHub profile.
-- [react-django-blog-template](https://github.com/HERALDEXX/react-django-blog-template) - A blog template built with React (Vite) and Django REST Framework
 <!--END_SECTION:latest_repos-->
 
 ## 💬 Quote of the Day
