@@ -60,7 +60,7 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
-- [distributed-job-scheduler](https://github.com/HERALDEXX/distributed-job-scheduler) - A lightweight, distributed task runner built with Go.
+- [distributed-task-runner](https://github.com/HERALDEXX/distributed-task-runner) - A lightweight, distributed task runner built with Go.
 - [linkedinscraper](https://github.com/HERALDEXX/linkedinscraper) - Scrape job postings from LinkedIn
 - [freelancer-project-tracker](https://github.com/HERALDEXX/freelancer-project-tracker) - A MySQL-based freelancer project and payment tracking database system.
 - [habit-tracker](https://github.com/HERALDEXX/habit-tracker) - A cross-platform application for building and tracking daily habits, built with Python
