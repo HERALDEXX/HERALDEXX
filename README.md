@@ -1,6 +1,6 @@
 # Hi, I'm Herald Mbre Inyang 👋
 
-Welcome to my GitHub! I'm a passionate full-stack web developer currently pursuing a BSc in Software Engineering. I love crafting innovative web solutions with creativity and precision, turning ideas into reality through code.
+Welcome to my GitHub! I'm a passionate software engineer and full-stack web developer. I love crafting innovative web solutions with creativity and precision, turning ideas into reality through code.
 
 ## 🚀 About Me
 
@@ -9,9 +9,11 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
 ## 🛠️ Skills
 
 - **Frontend**: HTML, CSS, JavaScript, React, TypeScript
-- **Backend**: Django, Python, MySQL
+- **Backend**: Django, Python, MySQL, PostgreSQL, Go
 - **Tools**: Git, VS Code, npm, Webpack
 - **Concepts**: REST APIs, Responsive Design, Agile Development
+
+---
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="41" alt="react logo"  />
@@ -36,11 +38,15 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="41" alt="npm logo"  />
   <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="41" alt="go logo"  />
+  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" height="41" alt="materialui logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="41" alt="tailwindcss logo"  />
   <img width ="12" />
 </div>
+
+---
 
 ## 🌟 Featured Project
 
