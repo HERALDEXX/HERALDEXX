@@ -77,8 +77,8 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Simplicity is the soul of efficiency."*  
-                                                                        > — Austin Freeman
+                                                                        > *"Programs must be written for people to read, and only incidentally for machines to execute."*  
+                                                                        > — Harold Abelson
                                                                         
 <!--END_SECTION:quote-->
 
