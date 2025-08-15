@@ -77,8 +77,8 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Programs must be written for people to read, and only incidentally for machines to execute."*  
-                                                                        > — Harold Abelson
+                                                                        > *"Talk is cheap. Show me the code."*  
+                                                                        > — Linus Torvalds
                                                                         
 <!--END_SECTION:quote-->
 
