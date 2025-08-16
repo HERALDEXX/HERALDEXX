@@ -66,11 +66,11 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
+- [github-mcp-server](https://github.com/HERALDEXX/github-mcp-server) - GitHub's official MCP Server
 - [full-stack-fastapi-template](https://github.com/HERALDEXX/full-stack-fastapi-template) - Full stack, modern web application template. Using FastAPI, React, SQLModel, PostgreSQL, Docker, GitHub Actions, automatic HTTPS and more.
 - [tmdb-movie-scraper](https://github.com/HERALDEXX/tmdb-movie-scraper) - Python scraper to collect movie data from TMDb API. Includes dataset of up to 10,000 popular movies.
 - [distributed-task-runner](https://github.com/HERALDEXX/distributed-task-runner) - A lightweight, distributed task runner built with Go.
 - [linkedinscraper](https://github.com/HERALDEXX/linkedinscraper) - Scrape job postings from LinkedIn
-- [freelancer-project-tracker](https://github.com/HERALDEXX/freelancer-project-tracker) - A MySQL-based freelancer project and payment tracking database system.
 <!--END_SECTION:latest_repos-->
 
 ## 💬 Quote of the Day
