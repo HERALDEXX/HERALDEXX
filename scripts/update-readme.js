@@ -4,15 +4,16 @@ const https = require("https");
 const username = "HERALDEXX";
 const readmePath = "README.md";
 const token = process.env.GH_TOKEN;
+const desiredCount = 5; // Number of repos to show
 
 // GitHub API options
 const options = {
   hostname: "api.github.com",
-  path: `/users/${username}/repos?sort=created&direction=desc&per_page=5`,
+  path: `/users/${username}/repos?type=owner&sort=created&direction=desc&per_page=100`,
   headers: {
-    "User-Agent": "HERALDEXX-readme-bot", // Required
+    "User-Agent": "HERALDEXX-readme-bot",
     Accept: "application/vnd.github.v3+json",
-    Authorization: `token ${token}`,
+    ...(token ? { Authorization: `token ${token}` } : {}),
   },
 };
 
@@ -21,18 +22,25 @@ https
     let data = "";
 
     res.on("data", (chunk) => (data += chunk));
-
     res.on("end", () => {
       try {
         const parsed = JSON.parse(data);
 
-        // Check if GitHub returned an error
         if (!Array.isArray(parsed)) {
           console.error("GitHub API error:", parsed.message || parsed);
-          process.exit(1); // Fail the GitHub Action
+          process.exit(1);
         }
 
-        const formatted = parsed
+        // Filter out forked repos (and optionally archived)
+        const nonForks = parsed.filter(
+          (repo) =>
+            repo.fork === false
+            && repo.archived === false // Uncomment to exclude archived repos
+        );
+
+        const selected = nonForks.slice(0, desiredCount);
+
+        const formatted = selected
           .map(
             (repo) =>
               `- [${repo.name}](${repo.html_url}) - ${
@@ -43,7 +51,6 @@ https
 
         let readme = fs.readFileSync(readmePath, "utf-8");
 
-        // Inject repos
         const newRepoSection = `<!--START_SECTION:latest_repos-->\n${formatted}\n<!--END_SECTION:latest_repos-->`;
         readme = readme.replace(
           /<!--START_SECTION:latest_repos-->[\s\S]*?<!--END_SECTION:latest_repos-->/,
@@ -51,7 +58,7 @@ https
         );
 
         fs.writeFileSync(readmePath, readme);
-        console.log("README updated with latest repos.");
+        console.log("✅ README updated with latest non-fork repos.");
       } catch (err) {
         console.error("Failed to parse JSON or write file:", err.message);
         process.exit(1);

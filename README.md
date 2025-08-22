@@ -1,19 +1,8 @@
-# Hi, I'm Herald Mbre Inyang 👋
+![](assets/Bottom_up.svg)
 
-Welcome to my GitHub! I'm a passionate software engineer and full-stack web developer. I love crafting innovative web solutions with creativity and precision, turning ideas into reality through code.
+## Hi, I'm Herald Mbre Inyang 👋
 
-## 🚀 About Me
-
-I'm a dedicated developer with a knack for building seamless, user-focused applications. My journey in software engineering is fueled by a love for creativity and the limitless possibilities of coding. Whether it's designing intuitive frontends or architecting robust backends, I thrive on bringing imagination to life. Currently, I'm honing my skills while pursuing my degree, always eager to learn and collaborate on exciting projects.
-
-## 🛠️ Skills
-
-- **Frontend**: HTML, CSS, JavaScript, React, TypeScript
-- **Backend**: Django, Python, MySQL, PostgreSQL, Go
-- **Tools**: Git, VS Code, npm, Webpack
-- **Concepts**: REST APIs, Responsive Design, Agile Development
-
----
+![Typing SVG — Herald Inyang](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&width=800&lines=Hi,+I%27m+Herald+Inyang+(HERALDEXX)+%F0%9F%91%8B+-+software+engineer+%26+full-stack+developer;HERALDEXX+Habit+Tracker+%E2%80%A2+Distributed+Task+Runner+%E2%80%A2+TMDb+scraper;Python+%E2%80%A2+Go+%E2%80%A2+JavaScript/TypeScript+%E2%80%A2+React+%E2%80%A2+Django+-+automation,+UX,+cross-platform+apps)
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="41" alt="react logo"  />
@@ -46,7 +35,18 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
   <img width ="12" />
 </div>
 
----
+I'm a passionate software engineer and full-stack web developer. I love crafting innovative web solutions with creativity and precision, turning ideas into reality through code.
+
+## 🚀 About Me
+
+I'm a dedicated developer with a knack for building seamless, user-focused applications. My journey in software engineering is fueled by a love for creativity and the limitless possibilities of coding. Whether it's designing intuitive frontends or architecting robust backends, I thrive on bringing imagination to life. Currently, I'm honing my skills while pursuing my degree, always eager to learn and collaborate on exciting projects.
+
+## 🛠️ Skills
+
+- **Frontend**: HTML, CSS, JavaScript, React, TypeScript
+- **Backend**: Django, Python, MySQL, PostgreSQL, Go
+- **Tools**: Git, VS Code, npm, Webpack
+- **Concepts**: REST APIs, Responsive Design, Agile Development
 
 ## 🌟 Featured Project
 
@@ -109,3 +109,5 @@ I'm always excited to connect, collaborate, or explore job opportunities. Feel f
 👉 Let's build something amazing together!
 
 *“Code is like art: it’s never finished, only abandoned.”* – Leonardo da Vinci (paraphrased)
+
+![](assets/Bottom_down.svg)
