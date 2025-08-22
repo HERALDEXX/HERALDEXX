@@ -2,7 +2,7 @@
 
 ## Hi, I'm Herald Mbre Inyang 👋
 
-![Typing SVG — Herald Inyang](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&width=800&lines=Hi,+I%27m+Herald+Inyang+(HERALDEXX)+%F0%9F%91%8B+-+software+engineer+%26+full-stack+developer;HERALDEXX+Habit+Tracker+%E2%80%A2+Distributed+Task+Runner+%E2%80%A2+TMDb+scraper;Python+%E2%80%A2+Go+%E2%80%A2+JavaScript/TypeScript+%E2%80%A2+React+%E2%80%A2+Django+-+automation,+UX,+cross-platform+apps)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&width=600&lines=Software+Engineer+%7C+Full-Stack+Developer;Python,+JavaScript,+Django,+React,+etc.;Automation,+UX,+Cross-Platform+Apps;Always+building,+always+learning)](https://git.io/typing-svg)
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="41" alt="react logo"  />
@@ -66,11 +66,11 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
-- [github-mcp-server](https://github.com/HERALDEXX/github-mcp-server) - GitHub's official MCP Server
-- [full-stack-fastapi-template](https://github.com/HERALDEXX/full-stack-fastapi-template) - Full stack, modern web application template. Using FastAPI, React, SQLModel, PostgreSQL, Docker, GitHub Actions, automatic HTTPS and more.
 - [tmdb-movie-scraper](https://github.com/HERALDEXX/tmdb-movie-scraper) - Python scraper to collect movie data from TMDb API. Includes dataset of up to 10,000 popular movies.
 - [distributed-task-runner](https://github.com/HERALDEXX/distributed-task-runner) - A lightweight, distributed task runner built with Go.
-- [linkedinscraper](https://github.com/HERALDEXX/linkedinscraper) - Scrape job postings from LinkedIn
+- [freelancer-project-tracker](https://github.com/HERALDEXX/freelancer-project-tracker) - A MySQL-based freelancer project and payment tracking database system.
+- [habit-tracker](https://github.com/HERALDEXX/habit-tracker) - A cross-platform application for building and tracking daily habits, built with Python
+- [python-basics-and-advanced](https://github.com/HERALDEXX/python-basics-and-advanced) - A collection of Python exercises, projects & notes from my basic & advanced Python courses at EarlyFounders Labs.
 <!--END_SECTION:latest_repos-->
 
 ## 💬 Quote of the Day
