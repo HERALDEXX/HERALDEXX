@@ -66,11 +66,11 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
+- [url-shortener](https://github.com/HERALDEXX/url-shortener) - A full-stack web application for shortening URLs with click tracking and analytics. Built with HTML/CSS/JavaScript frontend and Django backend.
 - [tmdb-movie-scraper](https://github.com/HERALDEXX/tmdb-movie-scraper) - Python scraper to collect movie data from TMDb API. Includes dataset of up to 10,000 popular movies.
 - [distributed-task-runner](https://github.com/HERALDEXX/distributed-task-runner) - A lightweight, distributed task runner built with Go.
 - [freelancer-project-tracker](https://github.com/HERALDEXX/freelancer-project-tracker) - A MySQL-based freelancer project and payment tracking database system.
 - [habit-tracker](https://github.com/HERALDEXX/habit-tracker) - A cross-platform application for building and tracking daily habits, built with Python
-- [python-basics-and-advanced](https://github.com/HERALDEXX/python-basics-and-advanced) - A collection of Python exercises, projects & notes from my basic & advanced Python courses at EarlyFounders Labs.
 <!--END_SECTION:latest_repos-->
 
 ## 💬 Quote of the Day
