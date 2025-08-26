@@ -35,11 +35,11 @@
   <img width ="12" />
 </div>
 
-I'm a passionate software engineer and full-stack web developer. I love crafting innovative web solutions with creativity and precision, turning ideas into reality through code.
+I'm a passionate software engineer and full-stack web developer. I love crafting innovative software solutions with creativity and precision, turning ideas into reality through code.
 
 ## 🚀 About Me
 
-I'm a dedicated developer with a knack for building seamless, user-focused applications. My journey in software engineering is fueled by a love for creativity and the limitless possibilities of coding. Whether it's designing intuitive frontends or architecting robust backends, I thrive on bringing imagination to life. Currently, I'm honing my skills while pursuing my degree, always eager to learn and collaborate on exciting projects.
+I'm a dedicated developer with a knack for building seamless, user-focused applications. My journey in software engineering is fueled by a love for creativity and the limitless possibilities of coding. Whether it's designing intuitive frontends or architecting robust backends, I thrive on bringing imagination to life. I'm always honing my skills, always eager to learn and collaborate on exciting projects.
 
 ## 🛠️ Skills
 
@@ -85,8 +85,6 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 ## 📚 Currently
 
-- Pursuing a BSc in Software Engineering, deepening my knowledge of software design and development.
-- Exploring advanced React patterns and Django REST framework to build even more powerful applications.
 - Open to collaborating on open-source projects or innovative startups!
 
 ## 📊 GitHub Stats
@@ -101,10 +99,20 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 I'm always excited to connect, collaborate, or explore job opportunities. Feel free to reach out!
 
-- 💬 WhatsApp: [Click to Chat](https://wa.me/qr/FB3C4RHBNC72C1)
-- 📧 Primary Email: herald.mbre.inyang@gmail.com
-- 📧 Secondary Email: inyangheraldmbre@outlook.com
-- 💼 LinkedIn: https://www.linkedin.com/in/herald-inyang/
+<p align="center">
+  <a href="https://wa.me/+2349064096015">
+    <img src="https://img.icons8.com/color/48/whatsapp--v1.png" width="30" style="vertical-align: middle;"/> WhatsApp
+  </a> &nbsp;&nbsp;
+  <a href="mailto:herald.mbre.inyang@gmail.com">
+    <img src="https://img.icons8.com/color/48/gmail-new.png" width="30" style="vertical-align: middle;"/> Gmail
+  </a> &nbsp;&nbsp;
+  <a href="mailto:inyangheraldmbre@outlook.com">
+    <img src="https://img.icons8.com/color/48/microsoft-outlook-2019.png" width="30" style="vertical-align: middle;"/> Outlook
+  </a> &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/herald-inyang/">
+    <img src="https://img.icons8.com/color/48/linkedin.png" width="30" style="vertical-align: middle;"/> LinkedIn
+  </a>
+</p>
 
 👉 Let's build something amazing together!
 
