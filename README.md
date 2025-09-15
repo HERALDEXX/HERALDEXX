@@ -36,6 +36,11 @@
 
   <img width="12" />
 
+<!-- CI/CD & Automation -->
+<img src="https://cdn.simpleicons.org/githubactions/2088FF" height="41" alt="github actions logo" />
+
+<img width="12" />
+
   <!-- Tools & Workflow -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg" height="41" alt="git logo" />
   <img width="12" />
@@ -66,6 +71,7 @@ I'm a dedicated developer with a knack for building seamless, user-focused appli
 - **Frontend**: HTML, CSS, JavaScript, React, Next.js, TypeScript
 - **Backend**: Django, Python, Go
 - **Database**: MySQL, PostgreSQL
+- **CI/CD & Automation:** GitHub Actions (testing, linting, builds, deployments)
 - **Tools**: Git, GitHub, VS Code, npm, Webpack
 - **Concepts**: REST APIs, Responsive Design, Agile Development
 
