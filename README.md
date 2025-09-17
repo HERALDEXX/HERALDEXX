@@ -1,6 +1,6 @@
-![](assets/Bottom_up.svg)
+![](assets/svgs/Bottom_up.svg)
 
-## Hi, I'm Herald Mbre Inyang <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="40px">
+## Hi, I'm Herald Mbre Inyang <img src="https://raw.githubusercontent.com/HERALDEXX/HERALDEXX/main/assets/gifs/Hi.gif" width="40px">
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&width=600&lines=Software+Engineer+%7C+Full-Stack+Developer;Python,+JavaScript,+Django,+React,+etc.;Automation,+UX,+Cross-Platform+Apps;Always+building,+always+learning)](https://git.io/typing-svg)
 
@@ -145,4 +145,4 @@ I'm always excited to connect, collaborate, or explore job opportunities. Feel f
 
 *“Code is like art: it’s never finished, only abandoned.”* – Leonardo da Vinci (paraphrased)
 
-![](assets/Bottom_down.svg)
+![](assets/svgs/Bottom_down.svg)
