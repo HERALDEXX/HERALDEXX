@@ -93,7 +93,7 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
-- [link-crush](https://github.com/HERALDEXX/link-crush) - A full-stack web application for shortening URLs with click tracking and analytics. Built with Next.js + Tailwind frontend and Django backend.
+- [link-crush](https://github.com/HERALDEXX/link-crush) - A full-stack web application for shortening URLs with click tracking and analytics. Built with Next.js + Tailwind frontend and Django + PostgreSQL backend.
 - [tmdb-movie-scraper](https://github.com/HERALDEXX/tmdb-movie-scraper) - Python scraper to collect movie data from TMDb API. Includes dataset of up to 10,000 popular movies.
 - [distributed-task-runner](https://github.com/HERALDEXX/distributed-task-runner) - A lightweight, distributed task runner built with Go.
 - [freelancer-project-tracker](https://github.com/HERALDEXX/freelancer-project-tracker) - A MySQL-based freelancer project and payment tracking database system.
