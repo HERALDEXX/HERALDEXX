@@ -104,8 +104,8 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Simplicity is the soul of efficiency."*  
-                                                                        > — Austin Freeman
+                                                                        > *"Code is like humor. When you have to explain it, it’s bad."*  
+                                                                        > — Cory House
                                                                         
 <!--END_SECTION:quote-->
 
