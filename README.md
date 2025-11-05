@@ -104,8 +104,8 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"The only way to learn a new programming language is by writing programs in it."*  
-                                                                        > — Dennis Ritchie
+                                                                        > *"Talk is cheap. Show me the code."*  
+                                                                        > — Linus Torvalds
                                                                         
 <!--END_SECTION:quote-->
 
