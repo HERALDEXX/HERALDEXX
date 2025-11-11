@@ -104,8 +104,8 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Simplicity is the soul of efficiency."*  
-                                                                        > — Austin Freeman
+                                                                        > *"First, solve the problem. Then, write the code."*  
+                                                                        > — John Johnson
                                                                         
 <!--END_SECTION:quote-->
 
