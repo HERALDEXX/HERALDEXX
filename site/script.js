@@ -28,7 +28,7 @@ function typeLoop() {
       phraseIndex = (phraseIndex + 1) % phrases.length;
     }
   }
-  const delay = deleting ? 40 : 80;
+  const delay = deleting ? 25 : 50;
   setTimeout(typeLoop, delay);
 }
 setTimeout(typeLoop, 250);
