@@ -616,6 +616,19 @@ blockquote {
     color: var(--text);
 }
 
+/* Hybrid contact label: hide text on small screens */
+.contact-links .label {
+    display: none;
+}
+
+@media (min-width: 821px) {
+    .contact-links .label {
+        display: inline-block;
+        font-size: .78rem;
+        letter-spacing: .3px;
+    }
+}
+
 .site-footer {
     position: relative;
     background: #080c10;
@@ -775,13 +788,34 @@ blockquote {
         text-align: center;
     }
 
+    .wave {
+        display: block;
+        margin: .6rem auto 0;
+    }
+
     .contact-links {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.2rem;
     }
 
     .contact-links a {
-        width: 100%;
-        justify-content: flex-start;
+        width: auto;
+        padding: .6rem;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .contact-links a:hover {
+        background: transparent;
+        transform: scale(1.15);
+        box-shadow: none;
+    }
+
+    .contact-links svg {
+        width: 28px;
+        height: 28px;
     }
 }
 
