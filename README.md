@@ -104,8 +104,8 @@ Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI*
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"First, solve the problem. Then, write the code."*  
-                                                                        > — John Johnson
+                                                                        > *"Talk is cheap. Show me the code."*  
+                                                                        > — Linus Torvalds
                                                                         
 <!--END_SECTION:quote-->
 
