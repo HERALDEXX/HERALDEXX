@@ -60,35 +60,37 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="41" alt="tailwindcss logo" />
 </div>
 
-I'm a passionate software engineer and full-stack web developer. I love crafting innovative software solutions with creativity and precision, turning ideas into reality through code.
+I'm a software engineer and full-stack developer building innovative applications and tools. I focus on creating seamless, user-focused experiences and turning ideas into working solutions.
 
 ## 🚀 About Me
 
-I'm a dedicated developer with a knack for building seamless, user-focused applications. My journey in software engineering is fueled by a love for creativity and the limitless possibilities of coding. Whether it's designing intuitive frontends or architecting robust backends, I thrive on bringing imagination to life. I'm always honing my skills, always eager to learn and collaborate on exciting projects.
+I build web apps and software that solve real problems. From designing intuitive frontends to architecting robust backends, I enjoy bringing ideas to life through code. Constantly learning, I thrive on collaboration and tackling exciting projects with practical, efficient solutions.
 
 ## 🛠️ Skills
 
-- **Frontend**: HTML, CSS, JavaScript, React, Next.js, TypeScript
-- **Backend**: Django, Python, Go
-- **Database**: MySQL, PostgreSQL
-- **CI/CD & Automation:** GitHub Actions (testing, linting, builds, deployments)
-- **Tools**: Git, GitHub, VS Code, npm, Webpack
-- **Concepts**: REST APIs, Responsive Design, Agile Development
+- **Frontend**  HTML, CSS, JavaScript, React, Next.js, TypeScript
+- **Backend**  Django, Python, Go
+- **Database**  MySQL, PostgreSQL
+- **CI/CD & Automation**  GitHub Actions – testing, linting, builds, deployments
+- **Tools**  Git, GitHub, VS Code, npm, Webpack
+- **Concepts**  REST APIs, Responsive Design, Agile Development
 
 ## 🌟 Featured Project
 
 ### [**HERALDEXX Habit Tracker**](https://github.com/HERALDEXX/habit-tracker)
 
-A sleek, cross-platform app for building and tracking daily habits.  
-Built in Python with both a **modern GUI** (customtkinter) and a **powerful CLI**, it includes:
+A sleek, cross-platform app for tracking daily habits.  
+Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it helps users build consistency while keeping data visual and actionable.
 
-- Dark/Light/System themes 🌗  
-- Real-time streak tracking 🔁  
-- Beautiful stats and visualizations 📊  
-- Autosave + daily reminders ✨  
-- Full source code and prebuilt releases for **Windows, macOS, and Linux**
+**Key Features:**
+- **Dark/Light/System themes** 🌗  
+- **Real-time streak tracking** 🔁  
+- **Beautiful stats & visualizations** 📊  
+- **Autosave + daily reminders** ✨  
+- **Cross-platform releases**: Windows, macOS, Linux  
 
-> ✅ Perfect for regular users — and devs who want to dive into the source.
+**Tech Stack:** Python, customtkinter, CLI, cross-platform packaging  
+> ✅ Perfect for users and devs who want to explore the source code.
 
 ## 🆕 Latest Projects
 
