@@ -1,3 +1,51 @@
+// Theme toggle functionality
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.querySelector(".theme-icon");
+const html = document.documentElement;
+
+// Check for saved theme preference or default to dark
+const currentTheme = localStorage.getItem("theme") || "dark";
+if (currentTheme === "light") {
+  html.setAttribute("data-theme", "light");
+  themeIcon.textContent = "☀️";
+}
+
+themeToggle?.addEventListener("click", () => {
+  const currentTheme = html.getAttribute("data-theme");
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  // Update icon with smooth transition
+  themeIcon.style.transform = "rotate(360deg)";
+  setTimeout(() => {
+    themeIcon.textContent = newTheme === "light" ? "☀️" : "🌙";
+    themeIcon.style.transform = "rotate(0deg)";
+  }, 150);
+
+  // Remove focus/hover state on mobile to hide tooltip
+  if ("ontouchstart" in window) {
+    themeToggle.blur();
+  }
+});
+
+// Scroll progress indicator
+const scrollProgress = document.getElementById("scroll-progress");
+if (scrollProgress) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      const windowHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / windowHeight) * 100;
+      scrollProgress.style.width = scrolled + "%";
+    },
+    { passive: true }
+  );
+}
+
 // Hero typing effect
 const typingEl = document.querySelector(".typing");
 const phrases = [
@@ -79,40 +127,86 @@ async function loadProjects() {
     if (!res.ok) throw new Error("GitHub API error");
     const data = await res.json();
     const filtered = data.filter((r) => !r.fork && !r.archived).slice(0, 9);
+
+    // Fetch language data for all repos in parallel
+    const reposWithLanguages = await Promise.all(
+      filtered.map(async (repo) => {
+        try {
+          const langRes = await fetch(
+            `https://api.github.com/repos/HERALDEXX/${repo.name}/languages`,
+            {
+              headers: { Accept: "application/vnd.github.v3+json" },
+            }
+          );
+          if (langRes.ok) {
+            const languages = await langRes.json();
+            return { ...repo, languages };
+          }
+        } catch (e) {
+          console.warn(`Failed to fetch languages for ${repo.name}`);
+        }
+        return { ...repo, languages: null };
+      })
+    );
+
     root.setAttribute("aria-busy", "false");
-    root.innerHTML = filtered
+    root.innerHTML = reposWithLanguages
       .map((repo) => {
         const desc = repo.description
           ? repo.description.replace(/</g, "&lt;")
           : "No description available";
 
-        const languageTag = repo.language
-          ? `<li>
-              ${repo.language} 
-              <span style="
-                display: inline-block;
-                background-color: #222;
-                color: #b77a3b;
-                font-size: 0.9em;
-                font-weight: bold;
-                padding: 0.3em 0.6em;
-                margin-left: 0.4em;
-                border-radius: 4px;
-                vertical-align: middle;
-                box-shadow: 0 0 8px #b77a3b;
-              ">most used</span>
-            </li>`
-          : "";
+        let languageTags = "";
+        if (repo.languages && Object.keys(repo.languages).length > 0) {
+          const total = Object.values(repo.languages).reduce(
+            (a, b) => a + b,
+            0
+          );
+          const langEntries = Object.entries(repo.languages)
+            .map(([lang, bytes]) => ({
+              lang,
+              bytes,
+              percent: ((bytes / total) * 100).toFixed(1),
+            }))
+            .sort((a, b) => b.bytes - a.bytes);
+
+          languageTags = langEntries
+            .map((entry, index) => {
+              const isTop = index === 0;
+              const star = isTop
+                ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="#ffd479" style="flex-shrink: 0; margin-right: 0.25rem;" aria-hidden="true">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>`
+                : "";
+              return `<li style="display: flex; align-items: center; ${
+                isTop ? "font-weight: 600;" : ""
+              }">${star}${entry.lang} ${entry.percent}%</li>`;
+            })
+            .join("");
+        } else if (repo.language) {
+          // Fallback to basic language if API call failed
+          languageTags = `<li style="display: flex; align-items: center; gap: 0.35rem; font-weight: 600;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffd479" style="flex-shrink: 0;" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            ${repo.language}
+          </li>`;
+        }
 
         return `
-          <article class="project-card" tabindex="0" style="position: relative;">
+          <article class="project-card" tabindex="0" style="position: relative;" 
+                   data-name="${repo.name}" 
+                   data-stars="${repo.stargazers_count || 0}" 
+                   data-updated="${repo.updated_at || repo.created_at}">
             <h3>${repo.name}</h3>
             <p>${desc}</p>
             <ul class="tags">
-              ${languageTag}
+              ${languageTags}
             </ul>
             <div class="actions">
-              <a class="btn small outline" href="${repo.html_url}" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="btn small outline" href="${
+                repo.html_url
+              }" target="_blank" rel="noopener">View on GitHub</a>
             </div>
             <div style="
               position: absolute;
@@ -137,6 +231,61 @@ async function loadProjects() {
 }
 loadProjects();
 
+// Project filtering and search
+const setupProjectFilters = () => {
+  const searchInput = document.getElementById("project-search");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  if (!searchInput || projectCards.length === 0) return;
+
+  const allProjects = [];
+
+  // Store project data for filtering
+  projectCards.forEach((card) => {
+    const languages = Array.from(card.querySelectorAll(".tags li")).map((tag) =>
+      tag.textContent
+        .trim()
+        .replace(/\s+[\d.]+%$/, "")
+        .trim()
+    );
+    const title = card.querySelector("h3")?.textContent || "";
+    const description = card.querySelector("p")?.textContent || "";
+
+    allProjects.push({
+      element: card,
+      languages,
+      titleLower: title.toLowerCase(),
+      descriptionLower: description.toLowerCase(),
+    });
+  });
+
+  // Filter function
+  const filterProjects = () => {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+
+    allProjects.forEach((project) => {
+      const matchesSearch =
+        !searchTerm ||
+        project.titleLower.includes(searchTerm) ||
+        project.descriptionLower.includes(searchTerm) ||
+        project.languages.some((lang) =>
+          lang.toLowerCase().includes(searchTerm)
+        );
+
+      if (matchesSearch) {
+        project.element.style.display = "";
+      } else {
+        project.element.style.display = "none";
+      }
+    });
+  };
+
+  searchInput.addEventListener("input", filterProjects);
+};
+
+// Setup filters after projects are loaded
+setTimeout(setupProjectFilters, 1000);
+
 // Quote of the day (random from local list)
 const quotes = [
   {
@@ -156,6 +305,54 @@ const quotes = [
   {
     text: "First, solve the problem. Then, write the code.",
     author: "John Johnson",
+  },
+  {
+    text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+    author: "Martin Fowler",
+  },
+  {
+    text: "The best error message is the one that never shows up.",
+    author: "Thomas Fuchs",
+  },
+  {
+    text: "Make it work, make it right, make it fast.",
+    author: "Kent Beck",
+  },
+  {
+    text: "Clean code always looks like it was written by someone who cares.",
+    author: "Robert C. Martin",
+  },
+  {
+    text: "Debugging is twice as hard as writing the code in the first place.",
+    author: "Brian Kernighan",
+  },
+  {
+    text: "It's not a bug – it's an undocumented feature.",
+    author: "Anonymous",
+  },
+  {
+    text: "Walking on water and developing software from a specification are easy if both are frozen.",
+    author: "Edward V. Berard",
+  },
+  {
+    text: "The most disastrous thing that you can ever learn is your first programming language.",
+    author: "Alan Kay",
+  },
+  {
+    text: "Deleted code is debugged code.",
+    author: "Jeff Sickel",
+  },
+  {
+    text: "There are only two hard things in Computer Science: cache invalidation and naming things.",
+    author: "Phil Karlton",
+  },
+  {
+    text: "Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.",
+    author: "Antoine de Saint-Exupéry",
+  },
+  {
+    text: "Before software can be reusable it first has to be usable.",
+    author: "Ralph Johnson",
   },
 ];
 function setQuote() {
@@ -248,9 +445,42 @@ if (backToTopBtn) {
   // Smooth scroll to top on click
   backToTopBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    // Use instant scroll on mobile for better performance
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      window.scrollTo(0, 0);
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   });
 }
+// Enhanced page transitions for navigation
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (href === "#") return;
+
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      // Add transition effect
+      document.body.classList.add("transitioning");
+
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        setTimeout(() => {
+          document.body.classList.remove("transitioning");
+        }, 100);
+      }, 200);
+    }
+  });
+});
