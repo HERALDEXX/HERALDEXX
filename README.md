@@ -95,7 +95,7 @@ Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it
 ## 🆕 Latest Projects
 
 <!--START_SECTION:latest_repos-->
-- [telepilot](https://github.com/HERALDEXX/telepilot) - AI‑powered Telegram bot and web dashboard for community automation, moderation, and analytics.
+- [telepilot](https://github.com/HERALDEXX/telepilot) - Telegram bot and web dashboard for community automation, moderation, and analytics.
 - [form-submission-app](https://github.com/HERALDEXX/form-submission-app) - A full-stack form submission application with real-time validation, toast notifications, and PostgreSQL database integration.
 - [link-crush](https://github.com/HERALDEXX/link-crush) - A full-stack web application for shortening URLs with click tracking and analytics. Built with Next.js + Tailwind frontend and Django + PostgreSQL backend.
 - [tmdb-movie-scraper](https://github.com/HERALDEXX/tmdb-movie-scraper) - Python scraper to collect movie data from TMDb API. Includes dataset of up to 10,000 popular movies.
