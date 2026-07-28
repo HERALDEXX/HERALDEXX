@@ -106,8 +106,8 @@ Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"First, solve the problem. Then, write the code."*  
-                                                                        > — John Johnson
+                                                                        > *"The only way to learn a new programming language is by writing programs in it."*  
+                                                                        > — Dennis Ritchie
                                                                         
 <!--END_SECTION:quote-->
 
