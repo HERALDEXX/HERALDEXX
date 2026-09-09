@@ -30,22 +30,6 @@ themeToggle?.addEventListener("click", () => {
   }
 });
 
-// Scroll progress indicator
-const scrollProgress = document.getElementById("scroll-progress");
-if (scrollProgress) {
-  window.addEventListener(
-    "scroll",
-    () => {
-      const windowHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (window.scrollY / windowHeight) * 100;
-      scrollProgress.style.width = scrolled + "%";
-    },
-    { passive: true }
-  );
-}
-
 // Hero typing effect
 const typingEl = document.querySelector(".typing");
 const phrases = [
@@ -53,7 +37,9 @@ const phrases = [
   "Automation · UX · Full-Stack Solutions",
   "Always building · Always learning",
 ];
-if (typingEl) typingEl.textContent = phrases[0].slice(0, 1);
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 let phraseIndex = 0;
 let charIndex = 0;
 let deleting = false;
@@ -78,7 +64,14 @@ function typeLoop() {
   const delay = deleting ? 25 : 50;
   setTimeout(typeLoop, delay);
 }
-setTimeout(typeLoop, 250);
+if (typingEl) {
+  if (prefersReducedMotion) {
+    typingEl.textContent = phrases[0];
+  } else {
+    typingEl.textContent = phrases[0].slice(0, 1);
+    setTimeout(typeLoop, 250);
+  }
+}
 
 // Mobile nav toggle
 const navToggle = document.querySelector(".nav-toggle");
@@ -117,15 +110,43 @@ document.addEventListener("click", (e) => {
 async function loadProjects() {
   const root = document.getElementById("projects-list");
   if (!root) return;
+  const projectsCacheKey = "portfolio-projects-cache";
+  const projectsCacheMaxAge = 60 * 60 * 1000;
+  let data;
+
   try {
     const res = await fetch(
       "https://api.github.com/users/HERALDEXX/repos?type=owner&sort=created&direction=desc&per_page=15",
       {
         headers: { Accept: "application/vnd.github.v3+json" },
-      }
+      },
     );
     if (!res.ok) throw new Error("GitHub API error");
-    const data = await res.json();
+    data = await res.json();
+    try {
+      localStorage.setItem(
+        projectsCacheKey,
+        JSON.stringify({ timestamp: Date.now(), data }),
+      );
+    } catch (e) {
+      console.warn("Unable to cache project data");
+    }
+  } catch (e) {
+    try {
+      const cached = JSON.parse(localStorage.getItem(projectsCacheKey));
+      if (!cached || Date.now() - cached.timestamp > projectsCacheMaxAge) {
+        throw new Error("No recent project data");
+      }
+      data = cached.data;
+    } catch (cacheError) {
+      root.innerHTML =
+        '<p style="opacity:.7">Failed to load projects. Please try again later.</p>';
+      root.setAttribute("aria-busy", "false");
+      return;
+    }
+  }
+
+  try {
     const filtered = data.filter((r) => !r.fork && !r.archived).slice(0, 9);
 
     // Fetch language data for all repos in parallel
@@ -136,7 +157,7 @@ async function loadProjects() {
             `https://api.github.com/repos/HERALDEXX/${repo.name}/languages`,
             {
               headers: { Accept: "application/vnd.github.v3+json" },
-            }
+            },
           );
           if (langRes.ok) {
             const languages = await langRes.json();
@@ -146,7 +167,7 @@ async function loadProjects() {
           console.warn(`Failed to fetch languages for ${repo.name}`);
         }
         return { ...repo, languages: null };
-      })
+      }),
     );
 
     root.setAttribute("aria-busy", "false");
@@ -160,7 +181,7 @@ async function loadProjects() {
         if (repo.languages && Object.keys(repo.languages).length > 0) {
           const total = Object.values(repo.languages).reduce(
             (a, b) => a + b,
-            0
+            0,
           );
           const langEntries = Object.entries(repo.languages)
             .map(([lang, bytes]) => ({
@@ -246,7 +267,7 @@ const setupProjectFilters = () => {
       tag.textContent
         .trim()
         .replace(/\s+[\d.]+%$/, "")
-        .trim()
+        .trim(),
     );
     const title = card.querySelector("h3")?.textContent || "";
     const description = card.querySelector("p")?.textContent || "";
@@ -269,7 +290,7 @@ const setupProjectFilters = () => {
         project.titleLower.includes(searchTerm) ||
         project.descriptionLower.includes(searchTerm) ||
         project.languages.some((lang) =>
-          lang.toLowerCase().includes(searchTerm)
+          lang.toLowerCase().includes(searchTerm),
         );
 
       if (matchesSearch) {
@@ -374,38 +395,6 @@ if (location.hash && location.hash.length > 1) {
   target?.focus?.();
 }
 
-// Scroll-triggered animations
-const animateOnScroll = () => {
-  const elements = document.querySelectorAll("[data-animate]:not(.animated)");
-  const viewportHeight =
-    window.innerHeight || document.documentElement.clientHeight;
-  elements.forEach((el) => {
-    const { top } = el.getBoundingClientRect();
-    // Trigger slightly earlier for better perceived performance
-    if (top <= viewportHeight * 0.9) {
-      el.classList.add("animated");
-    }
-  });
-};
-
-// Initial check
-animateOnScroll();
-
-// Listen for scroll events (throttled for performance)
-let scrollTimeout;
-window.addEventListener(
-  "scroll",
-  () => {
-    if (scrollTimeout) {
-      window.cancelAnimationFrame(scrollTimeout);
-    }
-    scrollTimeout = window.requestAnimationFrame(() => {
-      animateOnScroll();
-    });
-  },
-  { passive: true }
-);
-
 // Stagger animation for skill blocks and project cards
 const staggerElements = (selector, delay = 100) => {
   const elements = document.querySelectorAll(selector);
@@ -442,45 +431,24 @@ if (backToTopBtn) {
   // Listen to scroll
   window.addEventListener("scroll", toggleBackToTop, { passive: true });
 
-  // Smooth scroll to top on click
+  // Return to the top immediately.
   backToTopBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    // Use instant scroll on mobile for better performance
-    const isMobile = window.innerWidth <= 768;
-    if (isMobile) {
-      window.scrollTo(0, 0);
-    } else {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    window.scrollTo(0, 0);
   });
 }
-// Enhanced page transitions for navigation
+
+// Use native instant anchor navigation without a transition effect.
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     const href = this.getAttribute("href");
     if (href === "#") return;
 
-    e.preventDefault();
     const targetId = href.substring(1);
     const target = document.getElementById(targetId);
 
     if (target) {
-      // Add transition effect
-      document.body.classList.add("transitioning");
-
-      setTimeout(() => {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-
-        setTimeout(() => {
-          document.body.classList.remove("transitioning");
-        }, 100);
-      }, 200);
+      target.scrollIntoView({ behavior: "auto", block: "start" });
     }
   });
 });
