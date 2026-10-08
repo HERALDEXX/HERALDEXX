@@ -106,8 +106,8 @@ Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"The only way to learn a new programming language is by writing programs in it."*  
-                                                                        > — Dennis Ritchie
+                                                                        > *"Simplicity is the soul of efficiency."*  
+                                                                        > — Austin Freeman
                                                                         
 <!--END_SECTION:quote-->
 
