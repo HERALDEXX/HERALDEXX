@@ -106,8 +106,8 @@ Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Code is like humor. When you have to explain it, it’s bad."*  
-                                                                        > — Cory House
+                                                                        > *"Simplicity is the soul of efficiency."*  
+                                                                        > — Austin Freeman
                                                                         
 <!--END_SECTION:quote-->
 
