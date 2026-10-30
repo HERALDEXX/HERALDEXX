@@ -106,8 +106,8 @@ Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Simplicity is the soul of efficiency."*  
-                                                                        > — Austin Freeman
+                                                                        > *"Talk is cheap. Show me the code."*  
+                                                                        > — Linus Torvalds
                                                                         
 <!--END_SECTION:quote-->
 
