@@ -106,8 +106,8 @@ Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"Code is like humor. When you have to explain it, it’s bad."*  
-                                                                        > — Cory House
+                                                                        > *"Programs must be written for people to read, and only incidentally for machines to execute."*  
+                                                                        > — Harold Abelson
                                                                         
 <!--END_SECTION:quote-->
 
