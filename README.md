@@ -106,8 +106,8 @@ Built in Python with a **modern GUI (customtkinter)** and a **powerful CLI**, it
 
 <!--START_SECTION:quote-->
 🧠  
-                                                                        > *"First, solve the problem. Then, write the code."*  
-                                                                        > — John Johnson
+                                                                        > *"Code is like humor. When you have to explain it, it’s bad."*  
+                                                                        > — Cory House
                                                                         
 <!--END_SECTION:quote-->
 
